@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PetVibe | Tudo para seu melhor amigo</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        orange: { 500: '#FF8C00', 600: '#e07b00' },
+                        blue: { 900: '#102A43' }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <nav class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex items-center gap-2">
+                    <i data-lucide="paw-print" class="text-orange-500 h-8 w-8"></i>
+                    <span class="font-bold text-2xl text-blue-900">PetVibe</span>
+                </div>
+                <div class="hidden md:flex space-x-8 font-medium text-gray-600">
+                    <a href="#" class="text-orange-500">Início</a>
+                    <a href="#" class="hover:text-orange-500 transition">Cães</a>
+                    <a href="#" class="hover:text-orange-500 transition">Gatos</a>
+                    <a href="#" class="hover:text-orange-500 transition">Serviços</a>
+                </div>
+                <div class="flex items-center gap-4">
+                    <button class="p-2 hover:bg-gray-100 rounded-full relative">
+                        <i data-lucide="shopping-cart" class="text-gray-600"></i>
+                        <span class="absolute top-0 right-0 bg-orange-500 text-white text-xs rounded-full h-4 w-4 flex items-center justify-center">2</span>
+                    </button>
+                    <button class="bg-blue-900 text-white px-5 py-2 rounded-xl font-medium hover:bg-blue-800 transition">Login</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <header class="relative bg-blue-900 text-white overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 py-20 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 z-10">
+                <span class="bg-orange-500 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">Novidade</span>
+                <h1 class="text-5xl md:text-6xl font-bold mt-4 leading-tight">Felicidade em <br/>cada <span class="text-orange-500">lambida.</span></h1>
+                <p class="mt-4 text-gray-300 text-lg max-w-md">Os melhores produtos naturais, brinquedos e acessórios para cães e gatos. Entrega expressa para todo o Brasil.</p>
+                <div class="mt-8 flex gap-4">
+                    <button class="bg-orange-500 text-white px-8 py-3 rounded-xl font-bold text-lg hover:bg-orange-600 transition shadow-lg shadow-orange-500/30">Comprar Agora</button>
+                    <button class="bg-white/10 backdrop-blur-sm text-white px-8 py-3 rounded-xl font-bold text-lg hover:bg-white/20 transition">Ver Ofertas</button>
+                </div>
+            </div>
+            <div class="md:w-1/2 mt-10 md:mt-0 relative">
+                <img src="https://images.unsplash.com/photo-1450778869180-41d0601e046e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Cachorro feliz" class="rounded-3xl shadow-2xl rotate-2 hover:rotate-0 transition duration-500">
+            </div>
+        </div>
+    </header>
+
+    <section class="py-16 max-w-7xl mx-auto px-4">
+        <h2 class="text-2xl font-bold text-blue-900 mb-8">Categorias Populares</h2>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+            <div class="bg-white p-6 rounded-2xl shadow-sm hover:shadow-md transition cursor-pointer border border-gray-100 text-center group">
+                <div class="bg-orange-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-orange-500 transition">
+                    <i data-lucide="bone" class="text-orange-500 group-hover:text-white transition"></i>
+                </div>
+                <h3 class="font-bold text-gray-800">Ração & Petiscos</h3>
+            </div>
+            <div class="bg-white p-6 rounded-2xl shadow-sm hover:shadow-md transition cursor-pointer border border-gray-100 text-center group">
+                <div class="bg-blue-50 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-blue-900 transition">
+                    <i data-lucide="cat" class="text-blue-900 group-hover:text-white transition"></i>
+                </div>
+                <h3 class="font-bold text-gray-800">Brinquedos</h3>
+            </div>
+             <div class="bg-white p-6 rounded-2xl shadow-sm hover:shadow-md transition cursor-pointer border border-gray-100 text-center group">
+                <div class="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-green-500 transition">
+                    <i data-lucide="heart-pulse" class="text-green-600 group-hover:text-white transition"></i>
+                </div>
+                <h3 class="font-bold text-gray-800">Saúde e Higiene</h3>
+            </div>
+             <div class="bg-white p-6 rounded-2xl shadow-sm hover:shadow-md transition cursor-pointer border border-gray-100 text-center group">
+                <div class="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-purple-500 transition">
+                    <i data-lucide="shirt" class="text-purple-600 group-hover:text-white transition"></i>
+                </div>
+                <h3 class="font-bold text-gray-800">Acessórios</h3>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 bg-gray-100">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between items-end mb-8">
+                <div>
+                    <h2 class="text-3xl font-bold text-blue-900">Destaques da Semana</h2>
+                    <p class="text-gray-500 mt-2">Produtos selecionados com carinho para seu pet.</p>
+                </div>
+                <a href="#" class="text-orange-500 font-semibold hover:underline">Ver tudo -></a>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+                <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition group">
+                    <div class="relative h-48 bg-gray-200">
+                        <img src="https://images.unsplash.com/photo-1589924691195-41432c84c161?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" alt="Ração">
+                        <span class="absolute top-3 left-3 bg-white px-2 py-1 rounded-md text-xs font-bold text-blue-900">-15%</span>
+                    </div>
+                    <div class="p-4">
+                        <div class="text-xs text-gray-400 mb-1">Cães</div>
+                        <h3 class="font-bold text-lg text-gray-800 mb-1">Ração Premium Natural</h3>
+                        <div class="flex items-center gap-1 text-yellow-400 text-sm mb-3">
+                            <i data-lucide="star" class="fill-current w-4 h-4"></i>
+                            <span class="text-gray-400">(4.8)</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-xl font-bold text-orange-500">R$ 149,90</span>
+                            <button class="bg-blue-900 text-white p-2 rounded-lg hover:bg-orange-500 transition">
+                                <i data-lucide="plus" class="w-5 h-5"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition group">
+                    <div class="relative h-48 bg-gray-200">
+                        <img src="https://images.unsplash.com/photo-1548767797-d8c844163c4c?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" alt="Cama">
+                    </div>
+                    <div class="p-4">
+                        <div class="text-xs text-gray-400 mb-1">Gatos</div>
+                        <h3 class="font-bold text-lg text-gray-800 mb-1">Cama Nuvem Soft</h3>
+                        <div class="flex items-center gap-1 text-yellow-400 text-sm mb-3">
+                            <i data-lucide="star" class="fill-current w-4 h-4"></i>
+                            <span class="text-gray-400">(5.0)</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-xl font-bold text-orange-500">R$ 89,90</span>
+                            <button class="bg-blue-900 text-white p-2 rounded-lg hover:bg-orange-500 transition">
+                                <i data-lucide="plus" class="w-5 h-5"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                 <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition group">
+                    <div class="relative h-48 bg-gray-200">
+                        <img src="https://images.unsplash.com/photo-1576201836106-db1758fd1c97?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" alt="Brinquedo">
+                    </div>
+                    <div class="p-4">
+                        <div class="text-xs text-gray-400 mb-1">Cães</div>
+                        <h3 class="font-bold text-lg text-gray-800 mb-1">Mordedor Resistente</h3>
+                        <div class="flex items-center gap-1 text-yellow-400 text-sm mb-3">
+                            <i data-lucide="star" class="fill-current w-4 h-4"></i>
+                            <span class="text-gray-400">(4.9)</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-xl font-bold text-orange-500">R$ 39,90</span>
+                            <button class="bg-blue-900 text-white p-2 rounded-lg hover:bg-orange-500 transition">
+                                <i data-lucide="plus" class="w-5 h-5"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition group">
+                    <div class="relative h-48 bg-gray-200">
+                        <img src="https://images.unsplash.com/photo-1516734212186-a967f81ad0d7?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" alt="Shampoo">
+                    </div>
+                    <div class="p-4">
+                        <div class="text-xs text-gray-400 mb-1">Higiene</div>
+                        <h3 class="font-bold text-lg text-gray-800 mb-1">Shampoo Hipoalergênico</h3>
+                        <div class="flex items-center gap-1 text-yellow-400 text-sm mb-3">
+                            <i data-lucide="star" class="fill-current w-4 h-4"></i>
+                            <span class="text-gray-400">(4.7)</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-xl font-bold text-orange-500">R$ 45,00</span>
+                            <button class="bg-blue-900 text-white p-2 rounded-lg hover:bg-orange-500 transition">
+                                <i data-lucide="plus" class="w-5 h-5"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-blue-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <div class="flex justify-center items-center gap-2 mb-4">
+                <i data-lucide="paw-print" class="text-orange-500 h-6 w-6"></i>
+                <span class="font-bold text-xl">PetVibe</span>
+            </div>
+            <p class="text-gray-400 text-sm mb-6">Feito com carinho para quem ama animais.</p>
+            <div class="text-gray-500 text-xs">
+                &copy; 2024 PetVibe Store. Todos os direitos reservados.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
