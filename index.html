@@ -11,7 +11,7 @@
     <!-- O Seu CSS Separado -->
     <link rel="stylesheet" href="styles.css">
 
-    <!-- Import Map: Define onde encontrar as bibliotecas React -->
+    <!-- Import Map: Apenas o essencial para o React funcionar no navegador -->
     <script type="importmap">
         {
             "imports": {
@@ -22,16 +22,14 @@
         }
     </script>
     
-    <!-- Babel: Compila o JSX do ficheiro externo no navegador -->
+    <!-- Babel: Para processar o React -->
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 </head>
 <body class="bg-gray-50 text-gray-800 selection:bg-orange-100 selection:text-orange-600">
 
-    <!-- O React vai injetar o site aqui -->
     <div id="root"></div>
 
-    <!-- O Seu Script Separado -->
-    <!-- Nota: 'type="text/babel"' é obrigatório para ficheiros com JSX -->
+    <!-- Script da Aplicação -->
     <script type="text/babel" data-type="module" src="app.js"></script>
 </body>
 </html>
