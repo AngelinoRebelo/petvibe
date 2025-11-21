@@ -2,8 +2,8 @@ import React, { useState, useEffect } from 'react';
 import ReactDOM from 'react-dom/client';
 import { ShoppingCart, PawPrint, Search, Menu, X, Plus, Trash2, Package, Settings, Star, Heart, ChevronRight, Minus, Lock, User, Scissors, AlertCircle, ShieldAlert, MapPin, Phone, Mail, Clock, Calendar, CreditCard, Smartphone, Landmark, CheckCircle, ArrowLeft, Database } from 'lucide-react';
 
-// --- Importação do Turso/LibSQL ---
-import { createClient } from '@libsql/client';
+// --- CORREÇÃO: Importação direta via URL para evitar erro de módulo ---
+import { createClient } from 'https://esm.sh/@libsql/client@0.14.0/web';
 
 // =================================================================================
 // CONFIGURAÇÃO DO TURSO (SQL)
@@ -11,7 +11,7 @@ import { createClient } from '@libsql/client';
 
 const TURSO_URL = "libsql://petvibe-machaddoo.aws-us-west-2.turso.io";
 // ATENÇÃO: Cole o seu token abaixo entre as aspas!
-const TURSO_AUTH_TOKEN = "eyJhbGciOiJFZERTQSIsInR5cCI6IkpXVCJ9.eyJhIjoicnciLCJpYXQiOjE3NjM3NDIwOTQsImlkIjoiMjgxNDhkY2EtMjBkNi00OTkxLTlhNmQtOGNlNzM2NWFhZDhkIiwicmlkIjoiZGMzNDU5YWQtYzAwMS00ZDdkLWIzNTgtZTM4NWU2OTY3Mjg2In0.sud0k3XKamF1PqxyIcJ7teWMwSjZK97JuAXoqQCV9cjlzeTjE73EhjxbVCN4n3eKKi1mVjv0H1u6IXdBkOrqBw"; 
+const TURSO_AUTH_TOKEN = "COLE_SEU_TOKEN_AQUI"; 
 
 // =================================================================================
 
@@ -20,7 +20,7 @@ let db = null;
 let isConfigured = false;
 
 try {
-    if (TURSO_AUTH_TOKEN !== "eyJhbGciOiJFZERTQSIsInR5cCI6IkpXVCJ9.eyJhIjoicnciLCJpYXQiOjE3NjM3NDIwOTQsImlkIjoiMjgxNDhkY2EtMjBkNi00OTkxLTlhNmQtOGNlNzM2NWFhZDhkIiwicmlkIjoiZGMzNDU5YWQtYzAwMS00ZDdkLWIzNTgtZTM4NWU2OTY3Mjg2In0.sud0k3XKamF1PqxyIcJ7teWMwSjZK97JuAXoqQCV9cjlzeTjE73EhjxbVCN4n3eKKi1mVjv0H1u6IXdBkOrqBw") {
+    if (TURSO_AUTH_TOKEN !== "COLE_SEU_TOKEN_AQUI") {
         db = createClient({
             url: TURSO_URL,
             authToken: TURSO_AUTH_TOKEN,
@@ -40,7 +40,7 @@ const SAMPLE_ITEMS = [
 ];
 
 function App() {
-    const [user, setUser] = useState(null); // Agora gerido localmente, sem Firebase Auth
+    const [user, setUser] = useState(null);
     const [view, setView] = useState('home');
     const [isCartOpen, setIsCartOpen] = useState(false);
     const [items, setItems] = useState([]);
@@ -566,6 +566,3 @@ function App() {
         </div>
     );
 }
-
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<App />);
