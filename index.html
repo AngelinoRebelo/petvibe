@@ -24,12 +24,13 @@
     </style>
 
     <!-- Import Map para React e Bibliotecas -->
+    <!-- Correção: ?external=react adicionado ao lucide-react para evitar conflito de versões -->
     <script type="importmap">
         {
             "imports": {
                 "react": "https://esm.sh/react@18.2.0",
                 "react-dom/client": "https://esm.sh/react-dom@18.2.0/client",
-                "lucide-react": "https://esm.sh/lucide-react@0.468.0"
+                "lucide-react": "https://esm.sh/lucide-react@0.468.0?external=react"
             }
         }
     </script>
@@ -44,7 +45,7 @@
     <script type="text/babel" data-type="module">
         import React, { useState, useEffect } from 'react';
         import ReactDOM from 'react-dom/client';
-        import { ShoppingCart, PawPrint, Search, Menu, X, Plus, Trash2, Package, Settings, Star, Heart, ChevronRight, Minus, Image as ImageIcon, Lock, User, Scissors, AlertCircle } from 'lucide-react';
+        import { ShoppingCart, PawPrint, Search, Menu, X, Plus, Trash2, Package, Settings, Star, Heart, ChevronRight, Minus, Lock, User, Scissors, AlertCircle } from 'lucide-react';
         
         // --- Importações do Firebase (CDN) ---
         import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js';
@@ -52,7 +53,7 @@
         import { getFirestore, collection, addDoc, onSnapshot, deleteDoc, doc, query, orderBy, serverTimestamp } from 'https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js';
 
         // =================================================================================
-        // CONFIGURAÇÃO DO FIREBASE (ATUALIZADA)
+        // CONFIGURAÇÃO DO FIREBASE
         // =================================================================================
         
         const firebaseConfig = {
@@ -128,7 +129,6 @@
                     setLoading(false);
                 }, (error) => {
                     console.error("Erro ao buscar dados:", error);
-                    // Se der erro (ex: permissões), remove o loading para não travar a tela
                     setLoading(false); 
                 });
                 return () => unsubscribe();
